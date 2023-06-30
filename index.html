@@ -39,22 +39,23 @@
 <body>
     <!-- <video></video> -->
     <div id="card">
-        <model-viewer src="./assets/Planet_.glb" autoplay ar-scale="auto" camera-controls ar auto-rotate>
+        <model-viewer src="./assets/earth_export.glb" ios-src="./assets/earth_usdz.usdz" autoplay ar-scale="auto" camera-controls ar auto-rotate>
 
         </model-viewer>
 
     </div>
     <script type="module">
         window.addEventListener("load", () => {
-        var modelViewer = document.querySelector('model-viewer');
-        console.log("Can activate AR: " + modelViewer.canActivateAR);
-        modelViewer.activateAR();
-  });
+            var modelViewer = document.querySelector('model-viewer');
+            setTimeout(() => {
+                console.log("Can activate AR: " + modelViewer.canActivateAR);
+            modelViewer.activateAR();
+            }, 1000)
+        });
 
     </script>
-    <script nomodule
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-</script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
 
     <style>
         /* This keeps child nodes hidden while the element loads */
