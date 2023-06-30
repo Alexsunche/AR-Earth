@@ -15,6 +15,7 @@ body {
 
 model-viewer {
     /* width: 60%; */
+    display: none;
     height: 200px;
     margin: 0 auto;
     
